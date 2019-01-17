@@ -518,3 +518,194 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     font-family:inherit;
     font-size: 12px;
 }
+.box {
+    margin: 4% 0px 0px 30px;
+}
+.column li {
+    list-style-type: none;
+  }
+.design{
+    height: 20%;
+  background:url('./asset/Path9.png');
+  background-size: 100% 40px;
+  background-repeat: no-repeat; 
+}
+.quality{
+    padding:72px;
+}
+.ellipse {
+    background: url(./asset/Ellipse1.png);
+background-repeat: no-repeat;
+background-position: center;
+padding: 11px;
+  }
+  
+  .bar{
+    background-color: #CCCCCC;
+    height: 12px;
+    margin: auto;
+    width: 50%;  
+  }
+  p {
+    text-align:center;
+    color:black;
+    font-size:10px;
+  }
+  .col-sm-9{
+
+    position:relative;
+    height: 50px;
+    margin-top: 30px;
+    }
+    
+        .col-sm-9 .nav {
+            padding: 0px;
+            margin-top: -31px;
+            background: #F50A52;
+        }
+        .smallbox {
+            background-color: white;
+            float: left;
+            width: 16%;
+            padding: 0px;
+            border: 1px solid darkgrey;
+            margin: 0px 0px 4px 0px;
+            border-top: 5px solid #CCCCCC;
+        }
+        
+        
+        .col-sm-2 {
+            -ms-flex: 0 0 16.666667%;
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+        }
+
+          .circle {
+            background: url(./asset/Ellipse2.png);
+            padding: 11px;
+            background-repeat: no-repeat;
+            margin: 10px 0px 0px -10px;
+          }
+          .row .col-sm-12 .greencircle {
+            /* padding-right: 7px;
+            padding-left: 10px; */
+            margin: 1px;
+        }
+      
+        .greencircle .col-sm-1 {
+            border-radius: 50%;
+            margin: 2px auto auto 9px;
+            background: #03EF03;
+            padding-right: 0px;
+            height: 17px;
+            width: 8% !important;
+           
+        }
+        .row {
+            margin:auto;
+        }
+      .adjust {
+        padding-left: 5px;
+      padding-right: 0px;
+      margin-right: 0px;
+      margin-left: 0px;
+        }
+        h6 {
+            color: darkgrey;
+            font-size: 15px;
+            text-align: center;
+            padding: 17px;
+          }
+          .col-sm-3 {
+            flex: 0 0 20%;
+           
+            min-height: 100px;
+            height: auto;
+            
+            max-width: 100% !important;
+            max-height: 447px;
+            width: 100% !important;
+            margin: auto;}
+
+            .column{
+                margin: 45px 27px 0 -8px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                height: 210px;
+                background-color: #FFFFFF;
+              }
+              .column {
+                float: left;
+                width: 25%;
+                padding: 10px;
+                height: 218px; 
+              }
+              h5{
+                color: darkgrey;
+                font-size: 15px;
+                margin: 0px;
+                text-align: center;
+              }
+              
+.col-sm-3 {
+-ms-flex: 0 0 20%;
+flex: 0 0 20%;
+max-width: 23%;
+}
+.bluebox  {
+border: 5px solid #0DD6FF;
+height: auto;
+margin: 15px 0 0 0;
+display:none;
+max-width: 782px !important;
+}
+.try {
+height:8px;
+margin:auto;
+width:84%;
+display:none;
+}
+
+.bluebox, #flip {
+background-color: white;
+cursor:pointer;
+}
+.trendbutton{
+background-color: #0021D9;
+color:white;
+border-radius:3px;
+text-align:center;
+font-size:7px;
+display:flex;
+margin: 0 auto;
+border:none;
+}
+h4 {
+color:#089608;
+font-size:12px;
+text-align:center;
+}
+.percentbox {
+margin:10px;
+height:auto;
+}
+.align {
+color: darkgrey;
+font-size: 13px;
+text-align: center;
+padding: 0px;
+height:38%;
+}
+.col-sm-11 {
+-ms-flex: 0 0 91.666667%;
+flex: 0 0 97.666667%;
+max-width: 91.666667%;
+}
+.col-2 {
+    flex: 0 0 20%;
+    min-height: 100px;
+    height: 145px;
+    max-width: 57% !important;
+    max-height: 447px;
+    width: 138px !important;
+    margin: 5px;
+}
