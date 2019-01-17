@@ -404,17 +404,14 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 
 .nav-tabs .nav-link.active {
-    border-top: 5px solid #34CEAE;
-    border-right: 5px solid #34CEAE;
-    border-left: 5px solid #34CEAE;
-    border-bottom: 5px solid #34CEAE;
+    border-top: 5px solid grey;
+    border-right: 5px solid grey;
+    border-left: 5px solid grey;
+    border-bottom: 5px solid grey;
     border-radius: 10px;
     border-radius: 0px;
-    background-color: #ddd;
-    border-top: 5px solid #35D9DC;
-    border-right: 5px solid #35D9DC;
-    border-left: 5px solid #35D9DC;
-    border-bottom: 5px solid #35D9DC;
+    background-color: white;
+    
     
     
 }
@@ -438,7 +435,18 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     margin-top: 5px;
     margin-bottom: 0px;
 }
-
+#exampleFormControlSelect2 {
+    padding: 9px;
+    border-radius:3px;
+    width: 95px;
+    margin-right: 0px;
+    margin-left: 4px;
+    margin-top: 0px;
+    font-size: 10px;
+    color:white;
+    background-color: black;
+    border:none;
+}
 .filterbtn {
     padding:3px;
 }
@@ -502,29 +510,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .slider.round:before {
     border-radius: 50%;
   }
-  .filterbtn {
-      padding:3px;
-  }
-  /* .vertical_line {
-    border-left: 1px solid white;
-    height: auto;
-  } */
-  
-#exampleFormControlSelect2 {
-    padding: 4px;
-    width: 95px;
-    margin-right: 0px;
-    margin-left: 4px;
-    margin-top: 0px;
-    font-size: 10px;
-    color:white;
-    background-color: black;
-    border:none;
-}
-/* #exampleFormControlSelect1 {
-    margin:auto;
-} */
-.text{
+  .text{
     margin-right:4px;
     margin-left:4px;
     padding:0;
