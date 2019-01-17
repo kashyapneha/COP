@@ -411,15 +411,14 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     border-radius: 10px;
     border-radius: 0px;
     background-color: white;
-    
-    
-    
 }
 
 .filterButton  {
     color: white;
-    font-weight: 700;
-    float: right;
+    font-weight: 500;
+    /* float: right; */
+    height: auto;
+    margin: 5px;
     background: #856500;
     background: -moz-linear-gradient(left, #856500 0%, #f0b500 100%);
     background: -webkit-linear-gradient(left, #856500 0%,#f0b500 100%);
@@ -435,21 +434,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     margin-top: 5px;
     margin-bottom: 0px;
 }
-#exampleFormControlSelect2 {
-    padding: 9px;
-    border-radius:3px;
-    width: 95px;
-    margin-right: 0px;
-    margin-left: 4px;
-    margin-top: 0px;
-    font-size: 10px;
-    color:white;
-    background-color: black;
-    border:none;
-}
-.filterbtn {
-    padding:3px;
-}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -502,7 +487,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     transform: translateX(26px);
   }
   
-  /* Rounded sliders */
+  /* // Rounded sliders  */
   .slider.round {
     border-radius: 34px;
   }
@@ -518,6 +503,23 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     font-family:inherit;
     font-size: 12px;
 }
+/* 
+#exampleFormControlSelect2 {
+    padding: 9px;
+    border-radius:3px;
+    width: 95px;
+    margin-right: 0px;
+    margin-left: 4px;
+    margin-top: 0px;
+    font-size: 10px;
+    color:white;
+    background-color: black;
+    border:none;
+}
+.filterbtn {
+    padding:3px;
+}
+
 .box {
     margin: 4% 0px 0px 30px;
 }
@@ -587,8 +589,8 @@ padding: 11px;
             margin: 10px 0px 0px -10px;
           }
           .row .col-sm-12 .greencircle {
-            /* padding-right: 7px;
-            padding-left: 10px; */
+            // padding-right: 7px;
+            // padding-left: 10px; 
             margin: 1px;
         }
       
@@ -708,4 +710,4 @@ max-width: 91.666667%;
     max-height: 447px;
     width: 138px !important;
     margin: 5px;
-}
+} */

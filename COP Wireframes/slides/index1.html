@@ -19,460 +19,612 @@
             <!--<![endif]-->
         </head>
         
-        <body>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle" style="color: black;">Minor Enhancement UAT Defect Density - Trend</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+        <body onload="showIndex1()">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle" style="color: black;">Minor Enhancement UAT Defect Density - Trend</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img style="width:100%" src="css/layouts/POCTrend.png">
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div id="layout">
+                <div class="containerz">
+                    <div class="row rowz" style="height:100%;">
+                        <div class="col-sm-1">
+                            
+                        </div>
+                        <div class="col-sm-11">
+                            <div class="row" style="height: 100%; align-items: center;">
+                                <div class="col-sm-1 col-md-1"></div>
+                                <div class="col-sm-11 col-md-11 titleHeadline">Centralized Operations &amp; Performance
+                                </div></div>
                             </div>
-                            <div class="modal-body">
-                                <img style="width:100%" src="css/layouts/POCTrend.png">
+                        </div>
+                        <hr class="hrClass">
+                        <div class="row rowz" style="height:100%;">
+                            
+                            <div class="col-sm-4 col-md-4" style="margin: auto;">
+                                <div style="display:none;" class="text-center" id="index3">
+                                    <span class="text">Closed</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="text">Monitor</span>
+                                    <span class="text">TCS</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="text">Partner</span>
+                                </div>
+                                <div style="display:none;" class="text-center" id="index4">                                   
+                                    <span class="text">TCS</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="text">Partner</span>
+                                </div>
                             </div>
-                            <!-- <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                            
+                            <div class="col-sm-2 col-md-2">
+                                <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
+                                    <option>Select Tower</option>
+                                    <option>X</option>
+                                    <option>Y</option>
+                                    <option>Z</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2 col-md-2">
+                                <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
+                                    <option>Select Sub-Tower</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2 col-md-2">
+                                <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
+                                    <option>Select Month</option>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2 col-md-2">                
+                                <button type="button" class="btn btn-warning filterButton">Apply Filter <i class="fas fa-filter"></i></button>
+                            </div>
+                            
+                            <!-- <div class="col-sm-1 col-md-0">
                             </div> -->
                         </div>
                     </div>
                 </div>
-                <div id="layout">
-                    <div class="containerz">
-                        <div class="row rowz" style="height:100%;">
-                            <div class="col-xs-1">
-                                
-                            </div>
-                            <div class="col-sm-11">
-                                <div class="row" style="height: 100%; align-items: center;">
-                                    <div class="col-sm-1 col-md-1"></div>
-                                    <div class="col-sm-11 col-md-11 titleHeadline">Centralized Operations &amp; Performance
-                                    </div></div>
-                                </div>
-                            </div>
-                            <hr class="hrClass">
-                            <div class="row rowz" style="height:100%;">
-                                <div class="col-xs-1">
-                                    
-                                </div>
-                                <div class="col-sm-11">
-                                    <div class="row" style="height: 100%; align-items: center;">
-                                        <div class="col-sm-1 col-md-1"></div>
-                                        <div class="col-sm-1 col-md-2">
-                                            <button type="button" class="btn btn-warning filterButton">Filters</button>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
-                                                <option>Select Sub-Tower</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">
-                                            <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
-                                                <option>Select Month</option>
-                                                <option>January</option>
-                                                <option>February</option>
-                                                <option>March</option>
-                                                <option>April</option>
-                                                <option>May</option>
-                                                <option>June</option>
-                                                <option>July</option>
-                                                <option>August</option>
-                                                <option>September</option>
-                                                <option>October</option>
-                                                <option>November</option>
-                                                <option>December</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3">                
-                                            <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
-                                                <option>Select Year</option>
-                                                <option>2015</option>
-                                                <option>2016</option>
-                                                <option>2017</option>
-                                                <option>2018</option>
-                                                <option>2019</option>
-                                                <option>2020</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-1 col-md-0">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Menu toggle -->
-                        <a href="#menuPure" id="menuLink" class="menu-link">
-                            
-                            <!-- Hamburger icon -->
-                            <span></span>              
-                            
-                        </a>
-                        
-                        <div id="menuPure">
-                            <div class="pure-menu">
-                                <a class="pure-menu-heading" href="#" style="height: 46px;">COP Dashboard</a>
-                                
-                                <ul class="pure-menu-list">
-                                    <li class="pure-menu-item disabled"><a href="#" class=""></a></li>
-                                    <li class="pure-menu-item menu-item-divided" style="border-top:none;">
-                                        <a href="#" class="pure-menu-link" style="color:black; margin-left: 0px; margin-right: 0px; font-size: 18px;">Executive Dashboard</a>
-                                    </li>
-                                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Navigation Item 2</a></li>
-                                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Navigation Item 3</a></li>
-                                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Navigation Item 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div id="main">
-                            <div class="header">
-                                <div class="card text-center">
-                                    <div class="card-header">                               
-                                            <div class="container">
-                                                <div class="row">
-                                                    <ul class="nav nav-tabs justify-content-center" style="width:100%" id="myTab" role="tablist">
-                                                        <li class="nav-item widthCalendar">
-                                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-                                                                <img class="pure-img-responsive" src="css/layouts/Quality.png">
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item widthCalendar">
-                                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
-                                                                <img class="pure-img-responsive" src="css/layouts/Timeliness.png">
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item widthCalendar">
-                                                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
-                                                                <img class="pure-img-responsive" src="css/layouts/Automation.png">
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item widthCalendar">
-                                                            <a class="nav-link" id="fourth-tab" data-toggle="tab" href="#fourth" role="tab" aria-controls="fourth" aria-selected="false">
-                                                                <img class="pure-img-responsive" src="css/layouts/Customersat.png">
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <nav>
-                                                <div class="tab-content" id="myTabContent">
-                                                    
-                                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                                        <div class="container">                                           
-                                                            <div class="row lowerCardsContainer justify-content-center">
-                                                                <div class="col-md-0 col-lg-0"></div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Minor Enhancement UAT Defect</h5>
-                                                                            <p class="card-text greenNumbers">0.02</p>
-                                                                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Successful Management of Incidents After Release</h5>
-                                                                            <p class="card-text greenNumbers">99%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Minor Enhancement Defect Density</h5>
-                                                                            <p class="card-text greenNumbers">0.005</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">First Contact Resolution</h5>
-                                                                            <p class="card-text greenNumbers">99.2%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Updating of Known Error List</h5>
-                                                                            <p class="card-text greenNumbers">100%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-0 col-lg-0"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                                        <div class="container">                                           
-                                                            <div class="row lowerCardsContainer justify-content-center">
-                                                                <div class="col-md-0 col-lg-0"></div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Minor Enhancement UAT Defect 2</h5>
-                                                                            <p class="card-text greenNumbers">0.02</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Successful Management of Incidents After Release</h5>
-                                                                            <p class="card-text greenNumbers">99%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Minor Enhancement Defect Density 2</h5>
-                                                                            <p class="card-text greenNumbers">0.005</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">First Contact Resolution 2</h5>
-                                                                            <p class="card-text greenNumbers">99.2%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Updating of Known Error List 2</h5>
-                                                                            <p class="card-text greenNumbers">100%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-0 col-lg-0"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                                        <div class="container">                                           
-                                                            <div class="row lowerCardsContainer justify-content-center">
-                                                                <div class="col-md-0 col-lg-0"></div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Minor Enhancement UAT Defect 3</h5>
-                                                                            <p class="card-text greenNumbers">0.02</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Successful Management of Incidents After Release</h5>
-                                                                            <p class="card-text greenNumbers">99%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Minor Enhancement Defect Density 3</h5>
-                                                                            <p class="card-text greenNumbers">0.005</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">First Contact Resolution 3</h5>
-                                                                            <p class="card-text greenNumbers">99.2%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Updating of Known Error List 3</h5>
-                                                                            <p class="card-text greenNumbers">100%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-0 col-lg-0"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
-                                                        <div class="container">                                           
-                                                            <div class="row lowerCardsContainer justify-content-center">
-                                                                <div class="col-md-0 col-lg-0"></div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Minor Enhancement UAT Defect 4</h5>
-                                                                            <p class="card-text greenNumbers">0.02</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Successful Management of Incidents After Release</h5>
-                                                                            <p class="card-text greenNumbers">99%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Minor Enhancement Defect Density 4</h5>
-                                                                            <p class="card-text greenNumbers">0.005</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">First Contact Resolution 4</h5>
-                                                                            <p class="card-text greenNumbers">99.2%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-2">
-                                                                    <div class="card">
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Updating of Known Error List 4</h5>
-                                                                            <p class="card-text greenNumbers">100%</p>
-                                                                            <a href="#" class="btn btn-primary">See Trend</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-0 col-lg-0"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>        
-                                                </div>
-                                            </nav>
-                                        </div>
-                                        </div>
-                                    </div>                          
-                                </div>
-                            </ul>
-                        </div>
-                                            </div>
-                    </div>
+            </div>
+            <!-- Menu toggle -->
+            <a href="#menuPure" id="menuLink" class="menu-link">
+                
+                <!-- Hamburger icon -->
+                <span></span>              
+                
+            </a>
+            
+            <div id="menuPure">
+                <div class="pure-menu">
+                    <a onclick="showIndex1()" class="pure-menu-heading" href="#" style="height: 46px;">COP Dashboard</a>
                     
-                    
-                    
-                    <div class="content">
-                        
-                        <!-- <div class="pure-g">
-                            <div class="pure-u-1-4">
-                                <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
-                            </div>
-                            <div class="pure-u-1-4">
-                                <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
-                            </div>
-                            <div class="pure-u-1-4">
-                                <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
-                            </div>
-                            <div class="pure-u-1-4">
-                                <img class="pure-img-responsive" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
-                            </div>
-                        </div> -->
-                        
-                    </div>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item disabled"><a href="#" class=""></a></li>
+                        <li class="pure-menu-item menu-item-divided" style="border-top:none;">
+                            <a href="#" id="index1Nav" onclick="showIndex1()" class="pure-menu-link" style="color:black; margin-left: 10px; margin-right: 10px; font-size: 16px;">Executive Dashboard</a>
+                        </li>
+                        <li class="pure-menu-item menu-item-divided" style="border-top:none;">
+                            <a href="#" id="index3Nav" onclick="showIndex3()"class="pure-menu-link" style="color:black; margin-left: 10px; margin-right: 10px; font-size: 16px;">Performance Monitoring</a>
+                        </li>
+                        <li class="pure-menu-item menu-item-divided" style="border-top:none;">
+                            <a href="#" id="index4Nav" onclick="showIndex4()" class="pure-menu-link" style="color:black; margin-left: 10px; margin-right: 10px; font-size: 16px;">Index4</a>
+                        </li>
+                        <li class="pure-menu-item menu-item-divided" style="border-top:none;">
+                            <a href="#" onclick="showIndex5()" class="pure-menu-link" style="color:black; margin-left: 10px; margin-right: 10px; font-size: 16px;">Navigation Item 4</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             
+            <div id="index1">
+                <div class="header">
+                    <div class="card text-center">
+                        <div class="card-header">                               
+                            <div class="container">
+                                <div class="row">
+                                    <ul class="nav nav-tabs justify-content-center" style="width:100%" id="myTab" role="tablist">
+                                        <li class="nav-item widthCalendar">
+                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                                <img class="pure-img-responsive" src="css/layouts/Quality.png">
+                                            </a>
+                                        </li>
+                                        <li class="nav-item widthCalendar">
+                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                                                <img class="pure-img-responsive" src="css/layouts/Timeliness.png">
+                                            </a>
+                                        </li>
+                                        <li class="nav-item widthCalendar">
+                                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                                                <img class="pure-img-responsive" src="css/layouts/Automation.png">
+                                            </a>
+                                        </li>
+                                        <li class="nav-item widthCalendar">
+                                            <a class="nav-link" id="fourth-tab" data-toggle="tab" href="#fourth" role="tab" aria-controls="fourth" aria-selected="false">
+                                                <img class="pure-img-responsive" src="css/layouts/Customersat.png">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                            <nav>
+                                <div class="tab-content" id="myTabContent">
+                                    
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="container">                                           
+                                            <div class="row lowerCardsContainer justify-content-center">
+                                                <div class="col-md-0 col-lg-0"></div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Minor Enhancement UAT Defect</h5>
+                                                            <p class="card-text greenNumbers">0.02</p>
+                                                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Successful Management of Incidents After Release</h5>
+                                                            <p class="card-text greenNumbers">99%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Minor Enhancement Defect Density</h5>
+                                                            <p class="card-text greenNumbers">0.005</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">First Contact Resolution</h5>
+                                                            <p class="card-text greenNumbers">99.2%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Updating of Known Error List</h5>
+                                                            <p class="card-text greenNumbers">100%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-0 col-lg-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="container">                                           
+                                            <div class="row lowerCardsContainer justify-content-center">
+                                                <div class="col-md-0 col-lg-0"></div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Minor Enhancement UAT Defect 2</h5>
+                                                            <p class="card-text greenNumbers">0.02</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Successful Management of Incidents After Release</h5>
+                                                            <p class="card-text greenNumbers">99%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Minor Enhancement Defect Density 2</h5>
+                                                            <p class="card-text greenNumbers">0.005</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">First Contact Resolution 2</h5>
+                                                            <p class="card-text greenNumbers">99.2%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Updating of Known Error List 2</h5>
+                                                            <p class="card-text greenNumbers">100%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-0 col-lg-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                        <div class="container">                                           
+                                            <div class="row lowerCardsContainer justify-content-center">
+                                                <div class="col-md-0 col-lg-0"></div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Minor Enhancement UAT Defect 3</h5>
+                                                            <p class="card-text greenNumbers">0.02</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Successful Management of Incidents After Release</h5>
+                                                            <p class="card-text greenNumbers">99%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Minor Enhancement Defect Density 3</h5>
+                                                            <p class="card-text greenNumbers">0.005</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">First Contact Resolution 3</h5>
+                                                            <p class="card-text greenNumbers">99.2%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Updating of Known Error List 3</h5>
+                                                            <p class="card-text greenNumbers">100%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-0 col-lg-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
+                                        <div class="container">                                           
+                                            <div class="row lowerCardsContainer justify-content-center">
+                                                <div class="col-md-0 col-lg-0"></div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Minor Enhancement UAT Defect 4</h5>
+                                                            <p class="card-text greenNumbers">0.02</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Successful Management of Incidents After Release</h5>
+                                                            <p class="card-text greenNumbers">99%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Minor Enhancement Defect Density 4</h5>
+                                                            <p class="card-text greenNumbers">0.005</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">First Contact Resolution 4</h5>
+                                                            <p class="card-text greenNumbers">99.2%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Updating of Known Error List 4</h5>
+                                                            <p class="card-text greenNumbers">100%</p>
+                                                            <a href="#" class="btn btn-primary">See Trend</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-0 col-lg-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>        
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>                          
+            </div>
             
+            <div style="display:none;" id="index3">
+                <div class="header">
+                    <div class="card text-center">
+                        <div class="card-header">                               
+                            <div class="container">
+                                <div class="row">
+                                    <ul class="nav nav-tabs justify-content-center" style="width:100%" id="myTab" role="tablist">
+                                        <li class="nav-item widthCalendar">
+                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                                <img class="pure-img-responsive" src="css/layouts/P1IncidentsGraphFull.png">
+                                            </a>
+                                        </li>
+                                        <li class="nav-item widthCalendar">
+                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                                                <img class="pure-img-responsive" src="css/layouts/P2IncidentsGraphFull.png">
+                                            </a>
+                                        </li>
+                                        <li class="nav-item widthCalendar">
+                                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                                                <img class="pure-img-responsive" src="css/layouts/P3IncidentsGraphFull.png">
+                                            </a>
+                                        </li>
+                                        <li class="nav-item widthCalendar">
+                                            <a class="nav-link" id="fourth-tab" data-toggle="tab" href="#fourth" role="tab" aria-controls="fourth" aria-selected="false">
+                                                <img class="pure-img-responsive" src="css/layouts/P4IncidentsGraphFull.png">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="row">
+                                    <ul class="nav nav-tabs justify-content-center" style="width:100%" id="myTab" role="tablist">
+                                        <li class="nav-item widthCalendar">
+                                            <a class="" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                                <img class="pure-img-responsive" src="css/layouts/IncidentDetailsTable.png">
+                                            </a>
+                                        </li>
+                                        <li class="nav-item widthCalendar">
+                                            <a class="" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                                                <img class="pure-img-responsive" src="css/layouts/SlaHealthTable.png">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>                          
+    </div>
+    
+    <div style="display:none;" id="index4">
+        <div class="header">
+            <div class="card text-center">
+                <div class="card-header">                               
+                    <div class="container">
+                        <div class="row">
+                            <ul class="nav nav-tabs justify-content-center" style="width:100%" id="myTab" role="tablist">
+                                <li class="nav-item widthCalendar">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                        <img class="pure-img-responsive" src="css/layouts/Slide4TitleTable.png">
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>                                    
+                </div>
+            </div>
+        </div>                          
+    </div>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div class="content">
+    
+    <!-- <div class="pure-g">
+        <div class="pure-u-1-4">
+            <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
+        </div>
+        <div class="pure-u-1-4">
+            <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
+        </div>
+        <div class="pure-u-1-4">
+            <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
+        </div>
+        <div class="pure-u-1-4">
+            <img class="pure-img-responsive" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
+        </div>
+    </div> -->
+    
+</div>
+</div>
+</div>
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/ui.js"></script>
+    
+    <script>
+        (function (window, document) {
             
-            <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+            var layout   = document.getElementById('layout'),
+            menu     = document.getElementById('menu'),
+            menuLink = document.getElementById('menuLink'),
+            content  = document.getElementById('main');
+            
+            function toggleClass(element, className) {
+                var classes = element.className.split(/\s+/),
+                length = classes.length,
+                i = 0;
+                
+                for(; i < length; i++) {
+                    if (classes[i] === className) {
+                        classes.splice(i, 1);
+                        break;
+                    }
+                }
+                // The className is not found
+                if (length === classes.length) {
+                    classes.push(className);
+                }
+                
+                element.className = classes.join(' ');
+            }
+            
+            function toggleAll(e) {
+                var active = 'active';
+                
+                e.preventDefault();
+                toggleClass(layout, active);
+                toggleClass(menu, active);
+                toggleClass(menuLink, active);
+            }
+            
+            menuLink.onclick = function (e) {
+                toggleAll(e);
+            };
+            
+            content.onclick = function(e) {
+                if (menu.className.indexOf('active') !== -1) {
+                    toggleAll(e);
+                }
+            };
+            
+        }(this, this.document));
+        
+        
+        function showIndex1() {
+            $("#index3").hide();
+            $("#index4").hide();
+            $("#index1").show();
+        }
+        
+        function showIndex3() {
+            $("#index1").hide();
+            $("#index4").hide();
+            $("#index3").show();
+        }
+        
+        function showIndex4() {
+            $("#index1").hide();
+            $("#index3").hide();
+            $("#index4").show();
+        }
+        // $(document.getElementById()).ready(function(){
+            //     $("button").click(function(){
+                //         $("p").hide(1000);
+                //     });
+                // });
                 
                 
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-                <script src="js/ui.js"></script>
-                <script>
-                    (function (window, document) {
-                        
-                        var layout   = document.getElementById('layout'),
-                        menu     = document.getElementById('menu'),
-                        menuLink = document.getElementById('menuLink'),
-                        content  = document.getElementById('main');
-                        
-                        function toggleClass(element, className) {
-                            var classes = element.className.split(/\s+/),
-                            length = classes.length,
-                            i = 0;
-                            
-                            for(; i < length; i++) {
-                                if (classes[i] === className) {
-                                    classes.splice(i, 1);
-                                    break;
-                                }
-                            }
-                            // The className is not found
-                            if (length === classes.length) {
-                                classes.push(className);
-                            }
-                            
-                            element.className = classes.join(' ');
-                        }
-                        
-                        function toggleAll(e) {
-                            var active = 'active';
-                            
-                            e.preventDefault();
-                            toggleClass(layout, active);
-                            toggleClass(menu, active);
-                            toggleClass(menuLink, active);
-                        }
-                        
-                        menuLink.onclick = function (e) {
-                            toggleAll(e);
-                        };
-                        
-                        content.onclick = function(e) {
-                            if (menu.className.indexOf('active') !== -1) {
-                                toggleAll(e);
-                            }
-                        };
-                        
-                    }(this, this.document));
-                    
-                </script>
-            </body>
-            </html>
-            
+                // function showIndex3() {
+                    //     var x = document.getElementById("index3");
+                    //     if (x.style.display === "none") {
+                        //         x.style.display = "block";
+                        //     } else {
+                            //         document.getElementById("index1").style.display = "none";
+                            //     }
+                            // }
+                            // function showIndex3() {
+                                //     var x = document.getElementById("index3");
+                                //     if (x.style.display === "none") {
+                                    //         x.style.display = "block";
+                                    //     } else {
+                                        //         // x.style.display = "none";
+                                        //     }
+                                        // }
+                                        // function showIndex1() {
+                                            //     var x = document.getElementById("index1");
+                                            //     if (x.style.display === "none") {
+                                                //         x.style.display = "block";
+                                                //         ( "index3" ).hide;
+                                                //     } else {
+                                                    //         // x.style.display = "none";
+                                                    //     }
+                                                    // }
+                                                </script>
+                                            </body>
+                                            </html>
+                                            
