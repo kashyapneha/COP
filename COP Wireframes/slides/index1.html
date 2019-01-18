@@ -57,7 +57,7 @@
                         <div class="row rowz" style="height:100%;">
                             
                             <div class="col-sm-4 col-md-4" style="margin: auto;">
-                                <div style="display:none;" class="text-center" id="index3">
+                                <div style="display:none;" class="text-center" id="index3Toggle">
                                     <span class="text">Closed</span>
                                     <label class="switch">
                                         <input type="checkbox" checked>
@@ -71,7 +71,7 @@
                                     </label>
                                     <span class="text">Partner</span>
                                 </div>
-                                <div style="display:none;" class="text-center" id="index4">                                   
+                                <div style="display:none;" class="text-center" id="index4Toggle">                                   
                                     <span class="text">TCS</span>
                                     <label class="switch">
                                         <input type="checkbox" checked>
@@ -83,7 +83,7 @@
                             
                             <div class="col-sm-2 col-md-2">
                                 <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
-                                    <option>Select Tower</option>
+                                    <option>Tower</option>
                                     <option>X</option>
                                     <option>Y</option>
                                     <option>Z</option>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="col-sm-2 col-md-2">
                                 <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
-                                    <option>Select Sub-Tower</option>
+                                    <option>Sub-Tower</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -101,7 +101,7 @@
                             </div>
                             <div class="col-sm-2 col-md-2">
                                 <select class="form-control custom-select custom-select-sm" id="exampleFormControlSelect1">
-                                    <option>Select Month</option>
+                                    <option>Month</option>
                                     <option>January</option>
                                     <option>February</option>
                                     <option>March</option>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             
-            <div id="index1">
+            <div id="index1" class="indexPageClass">
                 <div class="header">
                     <div class="card text-center">
                         <div class="card-header">                               
@@ -410,7 +410,7 @@
                 </div>                          
             </div>
             
-            <div style="display:none;" id="index3">
+            <div style="display:none;" id="index3" class="indexPageClass">
                 <div class="header">
                     <div class="card text-center">
                         <div class="card-header">                               
@@ -466,7 +466,7 @@
         </div>                          
     </div>
     
-    <div style="display:none;" id="index4">
+    <div style="display:none;" id="index4" class="indexPageClass">
         <div class="header">
             <div class="card text-center">
                 <div class="card-header">                               
@@ -578,19 +578,25 @@
         function showIndex1() {
             $("#index3").hide();
             $("#index4").hide();
+            $("#index3Toggle").hide();
+            $("#index4Toggle").hide();
             $("#index1").show();
         }
         
         function showIndex3() {
             $("#index1").hide();
             $("#index4").hide();
+            $("#index4Toggle").hide();
             $("#index3").show();
+            $("#index3Toggle").show();
         }
         
         function showIndex4() {
             $("#index1").hide();
             $("#index3").hide();
+            $("#index3Toggle").hide();
             $("#index4").show();
+            $("#index4Toggle").show();
         }
         // $(document.getElementById()).ready(function(){
             //     $("button").click(function(){
@@ -627,4 +633,3 @@
                                                 </script>
                                             </body>
                                             </html>
-                                            
