@@ -28,10 +28,7 @@ This is the parent `<div>` that contains the menu and the content area.
     left: 0;
     padding-left: 0;
 }
-#layout.active #menuPure {
-    left: 250px;
-    width: 250px;
-}
+
 
 #layout.active .menu-link {
     left: 250px;
@@ -242,9 +239,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         left: 250px;
     }
 
-    .indexPageClass {
+    /* .indexPageClass {
         margin-left:250px;
-    }
+    } */
 }
 
 @media (max-width: 48em) {
@@ -358,8 +355,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 @media (width: 768px) {
     .titleHeadline {
-        font-size: 23px;
+        font-size: 21px;
         height: 42px;
+        padding-top: 7px;
     }
 }
 @media (min-width: 575px) {
@@ -421,6 +419,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     color: white;
     font-weight: 500;
     /* float: right; */
+    max-width: 100%;
     height: auto;
     margin: 5px;
     background: #856500;
@@ -506,6 +505,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     color:white;
     font-family:inherit;
     font-size: 12px;
+}
+
+#layout.active #menuPure {
+    left: 250px;
+    width: 250px;
+}
+#menuLink.active #menuPure {
+    left: 250px;
+    width: 250px;
 }
 /* 
 #exampleFormControlSelect2 {
