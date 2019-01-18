@@ -369,7 +369,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 @media (max-width: 574px) {
     .rowz {
         /* padding: 10px 50px */
-        margin-left: 50px;
+        margin-left: 25px;
         margin-right: 0px;
         padding-top: 10px;
         padding-bottom: 10px;
